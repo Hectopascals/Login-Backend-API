@@ -21,7 +21,7 @@ In the project directory, create a `.env` file with the following two variables:
 `DATABASE_URL=postgres://{username}@127.0.0.1:5432/{databaseName}`<br />
 `SECRET={yourSecretKeyForJWT}`
 
-Note: *you are supposed to fill in the fields with curly braces {}*
+Note: *you are supposed to remove the curly braces and fill the fields inside with data*
 
 Run `npm run build`, then `npm run dev-start` to launch (and allow reloading of) the app
 
