@@ -8,20 +8,23 @@ Example backend API for a login flow. Built using Express, JWT, and PostgreSQL. 
 
 Run `npm install` in project root directory to get all the node_modules
 
-To start postgres:
+To start postgres: <br />
 `brew services start postgresql` or `pg_ctl -D /usr/local/var/postgres start`
-
-To setup our DB table (this will create a table called `users`):
-`node db createTable`
-
-To drop the table (for any reason):
-`node db dropTable`
 
 In the project directory, create a `.env` file with the following two variables:
 `DATABASE_URL=postgres://{username}@127.0.0.1:5432/{databaseName}`<br />
 `SECRET={yourSecretKeyForJWT}`
 
 Note: *you are supposed to remove the curly braces and fill the fields inside with data*
+
+To create a database:<br />
+open Postgres by running: `psql`, then inside run: `create database {databaseName}`
+
+To setup our DB table (this will create a table called `users`):<br />
+`node db createTable`
+
+To drop the table (for any reason):<br />
+`node db dropTable`
 
 Run `npm run build`, then `npm run dev-start` to launch (and allow reloading of) the app
 
