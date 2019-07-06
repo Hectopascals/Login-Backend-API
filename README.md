@@ -18,10 +18,10 @@ To drop the table (for any reason):
 `node db dropTable`
 
 In the project directory, create a `.env` file with the following two variables:
-`DATABASE_URL=postgres://{username}@127.0.0.1:5432/{databaseName}`
+`DATABASE_URL=postgres://{username}@127.0.0.1:5432/{databaseName}`<br />
 `SECRET={yourSecretKeyForJWT}`
 
-Note: *you are supposed to fill in the fields in curly braces {}*
+Note: *you are supposed to fill in the fields with curly braces {}*
 
 Run `npm run build`, then `npm run dev-start` to launch (and allow reloading of) the app
 
@@ -43,9 +43,7 @@ Payload fields:
 
 Response body returns a JWT on success, used for other endpoints:
 ```json
-{
-  "token": "some_jwt_token" 
-}
+{ "token": "some_jwt_token" }
 ```
 
 ### `POST /login`
@@ -59,9 +57,7 @@ Endpoint to log in an existing user. Payload fields:
 
 Response body returns a JWT on success, used for other endpoints:
 ```json
-{
-  "token": "some_jwt_token"
-}
+{ "token": "some_jwt_token" }
 ```
 
 ### `GET /users`
@@ -74,7 +70,7 @@ Response body:
     {
       "email": "abc@github.com",
       "firstName": "Bob",
-      "lastName": "Ross"
+      "lastName": "Butterfield"
     }
   ]
 }
@@ -86,7 +82,7 @@ Endpoint to update the current user's name. Requires a valid header: `x-authenti
 Payload fields:
 ```json
 {
-  "firstName": "NewFirstName",
-  "lastName": "NewLastName"
+  "firstName": "Bob",
+  "lastName": "Ross"
 }
 ```
